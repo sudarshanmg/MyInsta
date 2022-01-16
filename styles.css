@@ -1,0 +1,239 @@
+
+/* Defaults */
+:root{
+    font-size: 16px;
+    font-family: sans-serif;
+    /* Variables for later use */
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+
+/* Removing default css */
+body{
+    color: black;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the scrollbar */
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: pink;
+    border-radius: 20px;
+}
+
+
+/* Posts Section */
+main{
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 1rem;
+}
+
+/* Instagram (title) */
+.title{
+
+    display: inline-block;
+    position: fixed;
+    top: 1rem;
+    color: pink;
+    z-index: 1;
+    left:44%;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+
+/* Top Navbar */
+.navbar{
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--bg-primary);
+
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item:last-child{
+    margin-left: auto;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 1rem;
+    margin-top: 0.8rem;
+}
+
+/* Hamburger Icon */
+.hamburger{
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    top: 1.3rem;
+    left:1rem;
+    visibility: hidden;
+}
+
+.fas{
+    color: pink;
+}
+
+/* pic */
+.me{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 20px;
+    outline: pink solid 1px;
+}
+
+/* Vertical navbar */
+
+.vertical{
+    background-color: #1e1e24;
+    margin-top: 5rem;
+    width: 4rem;
+    float: left;
+    top:0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .vertical-link{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  
+  
+  .vertical-link:first-child{
+    margin-top: 4rem;
+  }
+  
+  
+  .ver-item{
+    color: pink;
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  /* Styling the scrollbar */
+.vertical::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.vertical::-webkit-scrollbar-thumb{
+    display: none;
+}
+
+  
+  /* Story image */
+  .story{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border: 2px pink solid;
+  }
+
+  .ver-item:hover{
+    color: black;
+    background-color: pink;
+  }
+
+  /* Post Section */
+
+  .patch-list{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+  }
+  
+  .patch{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 40vh;
+
+    min-width: 25rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: white;
+    outline: pink 3px solid;
+    color: black;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: 50vw;
+
+    z-index: -1;
+  }
+  
+  .patch:hover{
+    transform: translateY(-1rem);
+  }
+  
+  .patch:hover~.patch{
+    transform: translateY(3rem);
+  }
+
+  .postImage{
+      width: 25rem;
+      height: 13rem;
+      border-radius: 16px;
+      float: left;
+      margin-right: 1rem;
+  }
+
+
+
+/* Triggering the icon */
+
+@media only screen and (max-width: 745px){
+    .navbar-nav{
+        display: none;
+    }
+
+    .hamburger{
+        visibility: visible;
+    }
+
+    #check{
+        visibility: hidden;
+    }
+}
+
+/* Hide captions */
+@media only screen and (max-width: 1160px)
+{
+    .captions{
+        display: none;
+    }
+}
+
