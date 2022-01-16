@@ -181,7 +181,7 @@ main{
     position: relative;
     flex-direction: column;
     height: 40vh;
-
+    max-height: 50rem;
     min-width: 25rem;
     padding: 1.5rem;
     border-radius: 16px;
